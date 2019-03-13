@@ -1,0 +1,9 @@
+.input-command{
+    margin-left: auto;
+    margin-right: auto;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box; // 1
+}

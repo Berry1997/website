@@ -9,8 +9,11 @@ var positionX = [20, 20, 370, 370];
 var positionY = [20, 370, 20, 370];
 
 canvas = document.createElement('canvas');
-canvas.setAttribute('width', 400);
-canvas.setAttribute('height', 400);
+var width = document.getElementById('canvasDiv').offsetWidth;
+var height = document.getElementById('canvasDiv').offsetHeight;
+console.log(height);
+canvas.setAttribute('width', height);
+canvas.setAttribute('height', height);
 canvas.setAttribute('id', 'canvas');
 canvasDiv.appendChild(canvas);
 document.getElementById('canvas').style.border = "thick solid black";
