@@ -1,86 +1,91 @@
 <html>
-  <head>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" type="text/css" href="web_MVP.css" />
-  </head>
-  <header class="navbar">
-    <a class="navbar-brand" href="#">Navbar</a>
-  </header>
-  <body>
-    <div class="container-fluid">
-      <div class="row h-100">
-        <div class="col-12 col-xl-2 border border-warning">
-          <form class="align-items-center d-flex input-command">
-            <span class="display: inline-block ">
-              <input type="text" placeholder=">" />
-            </span>
-          </form>
-        </div>
-        <div class="col-12 col-xl-8 border border-primary"></div>
-        <div class="col-12 col-xl-2 border border-danger"></div>
-      </div>
-    </div>
-  </body>
 
-  <!--
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="web_MVP.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <script src="https://www.gstatic.com/jsaction/contract.js"></script>
+  <script src="https://www.gstatic.com/jsaction/dispatcher.js"></script>
+</head>
+<header class="navbar">
+  <a class="navbar-brand" href="#">Navbar</a>
+</header>
+
 <body>
-  <div class="container">
-    <div class="row h-50">
-        <div class="column col-md-8 h-100" id="canvasDiv"></div>
-      <div class="col-md-4 control_panel">
-        <div class="row">
-          <div class="col w-100">
-            <div class="dropdown row justify-content-start">
-              <label for="starting" class="col-form-label w-25">From: </label>
-              <button class="btn btn-primary dropdown-toggle " id="starting" type="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                Start Point
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" id="menu" aria-labelledby="dropdownMenu1">
-                <li><a href="#" class="dropdown-item" value="1">1</a></li>
-                <li><a href="#" class="dropdown-item" value="2">2</a></li>
-                <li><a href="#" class="dropdown-item" value="3">3</a></li>
-                <li><a href="#" class="dropdown-item" value="4">4</a></li>
-              </ul>
-            </div>
-            <div class="dropdown row justify-content-start">
-              <label for = "stopping" class="col-form-label w-25">To: </label>
-              <button id = "stopping" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="true">
-                End Point
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" id="menu2" aria-labelledby="dropdownMenu1">
-                <li><a href="#" class="dropdown-item">1</a></li>
-                <li><a href="#" class="dropdown-item">2</a></li>
-                <li><a href="#" class="dropdown-item">3</a></li>
-                <li><a href="#" class="dropdown-item">4</a></li>
-              </ul>
-            </div>
-          
-          <button class="btn btn-secondary row" id="OK">
-            OK
-          </button>
+  <div class="container-fluid">
+    <div class="row flex-xl-nowrap ">
+      <div class="col-12 col-xl-2 col-md-3 border tool-bar border-warning">
+        <form class="align-items-center d-flex input-command">
+          <span class="display: inline-block ">
+            <input type="text" class="form_control" placeholder=">" />
+          </span>
+        </form>
+        <div class=" collapse bd-links ">
+          <div>
+            <h1>tools</h1>
+          </div>
         </div>
       </div>
-        <div class="row AGV_Section w-100" >
-          <h4> AGV #1 </h4>
-          <div class="w-100 d-none d-md-block"></div>
-          
+      <main class="col-12 col-xl-8 col-md-9 border border-primary">
+        <div class="map-display">
+          <span>
+            MAP
+          </span>
+          <canvas class="drawing-panel"></canvas>
+        </div>
+      </main>
+      <div class="col-12 col-xl-2 d-xl-block border border-danger"
+      jsaction="start.drag;pointerleave:start.drag;pointermove:start.drag;pointerup:start.drag;touchstart:start.drag;touchcancel:start.drag;touchmove:start.drag;touchend:start.drag;pointerdown:start.drag">
+        <div class="row">
+          <div class="col-md-4 control_panel">
+            <div class="row">
+              <div class="col w-100">
+                <div class="dropdown row justify-content-start">
+                  <label for="starting" class="col-form-label w-25">From: </label>
+                  <button class="btn btn-primary dropdown-toggle " id="starting" type="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="true">
+                    Start Point
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" id="menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#" class="dropdown-item" value="1">1</a></li>
+                    <li><a href="#" class="dropdown-item" value="2">2</a></li>
+                    <li><a href="#" class="dropdown-item" value="3">3</a></li>
+                    <li><a href="#" class="dropdown-item" value="4">4</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown row justify-content-start">
+                  <label for="stopping" class="col-form-label w-25">To: </label>
+                  <button id="stopping" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="true">
+                    End Point
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" id="menu2" aria-labelledby="dropdownMenu1">
+                    <li><a href="#" class="dropdown-item">1</a></li>
+                    <li><a href="#" class="dropdown-item">2</a></li>
+                    <li><a href="#" class="dropdown-item">3</a></li>
+                    <li><a href="#" class="dropdown-item">4</a></li>
+                  </ul>
+                </div>
+                <button class="btn btn-secondary row" id="OK">
+                  OK
+                </button>
+              </div>
+            </div>
+            <div class="row AGV_Section w-100">
+              <span> AGV #1 </span>
+              <div class="w-100 d-none d-md-block"></div>
+
               <div class="col-md-6" id="car_1_x">
                 X:
               </div>
               <div class="col-md-6" id="car_1_y">
                 Y:
+              </div>
             </div>
-          </div>
-          <div class="row justify-content-between tail w-100">
+            <div class="row justify-content-between tail w-100">
               <button class="btn btn-secondary" id="Clear">
                 Clear
               </button>
@@ -88,22 +93,17 @@
                 AGV
               </button>
             </div>
+          </div>
+        </div>
       </div>
-     
     </div>
-    
 </body>
--->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <!--<script type="text/javascript" src="web_MVP_prop.js"></script>-->
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"
-  ></script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--<script type="text/javascript" src="web_MVP_prop.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"></script>
+
 </html>
