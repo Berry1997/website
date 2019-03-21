@@ -1,3 +1,7 @@
+html,body {
+  height:100%;
+  weight:100%;
+}
 .input-command {
   margin-left: auto;
   margin-right: auto;
@@ -12,6 +16,7 @@
 .form_control {
   display: block;
 }
+
 
 
 .tool-bar {
@@ -58,5 +63,3 @@
     display: block;
   }
 }
-
-
