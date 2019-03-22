@@ -45,77 +45,73 @@
     </div>
   </nav>
 
-
   <!-- Map Display section -->
-
-  <div id="map_display" class="map-display col-12 col-xl-8 col-md-9 border border-primary navbar-offset">
+  <div id="map_display" class="map-display col-12 col-md-9 border border-primary">
     <span>
       MAP
     </span>
     <canvas class="drawing-panel"></canvas>
   </div>
 
-
   <!-- Controller section -->
-  <div style="overflow-y:scroll" id="control_panel" class="col-12 col-xl-2 d-xl-block border border-danger ">
-    <div class="row">
-      <div class="col-md-4 control_panel">
-        <div class="row">
-          <div class="col w-100">
-            <div class="dropdown row justify-content-start">
-              <label for="starting" class="col-form-label w-25">From: </label>
-              <button class="btn btn-primary dropdown-toggle " id="starting" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                Start Point
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" id="menu" aria-labelledby="dropdownMenu1">
-                <li><a href="#" class="dropdown-item" value="1">1</a></li>
-                <li><a href="#" class="dropdown-item" value="2">2</a></li>
-                <li><a href="#" class="dropdown-item" value="3">3</a></li>
-                <li><a href="#" class="dropdown-item" value="4">4</a></li>
-              </ul>
-            </div>
-            <div class="dropdown row justify-content-start">
-              <label for="stopping" class="col-form-label w-25">To: </label>
-              <button id="stopping" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                End Point
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" id="menu2" aria-labelledby="dropdownMenu1">
-                <li><a href="#" class="dropdown-item">1</a></li>
-                <li><a href="#" class="dropdown-item">2</a></li>
-                <li><a href="#" class="dropdown-item">3</a></li>
-                <li><a href="#" class="dropdown-item">4</a></li>
-              </ul>
-            </div>
-            <button class="btn btn-secondary row" id="OK">
-              OK
-            </button>
-          </div>
-        </div>
-        <div class="row AGV_Section w-100">
-          <span> AGV #1 </span>
-          <div class="w-100 d-none d-md-block"></div>
+  <div class="side-bar">
+    <div class="row justify-content-around ml-2 mr-2 mt-2 mb-2 ">
+      <div class="dropdown">
+        <label for="starting" class="col-form-label">From: </label>
+        <button class="btn btn-primary dropdown-toggle " id="starting" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Start Point
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" id="menu" aria-labelledby="dropdownMenu1">
+          <li><a href="#" class="dropdown-item" value="1">1</a></li>
+          <li><a href="#" class="dropdown-item" value="2">2</a></li>
+          <li><a href="#" class="dropdown-item" value="3">3</a></li>
+          <li><a href="#" class="dropdown-item" value="4">4</a></li>
+        </ul>
+      </div>
+      <div class="dropdown">
+        <label for="stopping" class="col-form-label">To: </label>
+        <button id="stopping" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          End Point
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" id="menu2" aria-labelledby="dropdownMenu1">
+          <li><a href="#" class="dropdown-item">1</a></li>
+          <li><a href="#" class="dropdown-item">2</a></li>
+          <li><a href="#" class="dropdown-item">3</a></li>
+          <li><a href="#" class="dropdown-item">4</a></li>
+        </ul>
+      </div>
+      <button class="btn btn-secondary " id="OK">
+        OK
+      </button>
+    </div>
 
-          <div class="col-md-6" id="car_1_x">
+    <div class="col-12  d-xl-block border border-danger pt-3 AGV_Section">
+      <div class="control_panel">
+        <div class="row ">
+          <span class="col-4"> AGV #1 </span>
+          <div class="w-100 d-none d-md-block"></div>
+          <div class="position col-4" id="car_1_x">
             X:
           </div>
-          <div class="col-md-6" id="car_1_y">
+          <div class="position col-4" id="car_1_y">
             Y:
           </div>
         </div>
-        <div class="row justify-content-between tail w-100">
-          <button class="btn btn-secondary" id="Clear">
-            Clear
-          </button>
-          <button class="btn btn-secondary" id="car_generate">
-            AGV
-          </button>
-        </div>
-      </div>
 
-    <!--</div>
-    </div> -->
+      </div>
+    </div>
+    <div class="row justify-content-end ml-3 mr-3 mt-2 mb-2">
+      <button class="btn btn-secondary mr-1" id="Clear">
+        Clear
+      </button>
+      <button class="btn btn-secondary" id="car_generate">
+        AGV
+      </button>
+    </div>
+  </div>
+
 </body>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

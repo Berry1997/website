@@ -1,7 +1,4 @@
-html,body {
-  height:100%;
-  weight:100%;
-}
+
 .input-command {
   margin-left: auto;
   margin-right: auto;
@@ -31,15 +28,20 @@ html,body {
   margin-left: -15px;
 }
 
+
 /*for mobile phones*/
+
 .drawing-panel{
+  display: block;
   width:100%;
   height:300px;
   border: 1px solid;
 }
 .map-display{
+
   padding-top:5px;
   padding-bottom: 5px;
+  height:350px;
 }
 .border{
   border-style: dotted;
@@ -48,6 +50,7 @@ html,body {
 .d-none {
   display: none;
 }
+
 /*for tablets*/
 @media only screen and (min-width:768px) {
   .bd-tools {
@@ -56,10 +59,31 @@ html,body {
   .bd-links {
     display: block !important;
   }
+
 }
 /*for desktops*/
-@media only screen and(min-width:1200px) {
+@media (min-width:1200px) {
+
   .d-xl-block {
     display: block;
+  }
+  .side-bar{
+    float:right;
+    width:28%;
+    padding-right: 5rem;
+  }
+  .map-display{
+    float:left;
+    padding-top:5px;
+    padding-bottom: 5px;
+    height:80%;
+    width:70%;
+
+  }
+  .drawing-panel{
+    display: block;
+    width:100%;
+    height:95%;
+    border: 1px solid;
   }
 }
