@@ -32,6 +32,6 @@ http.createServer(function(request, response) {
       response.end();
     });
   });
-}).listen(parseInt(port, "172.16.100.79"));
+}).listen(parseInt(port, "192.168.43.236"));
 
-console.log("Static file server running at\n  => http://172.16.100.79:" + port + "/\nCTRL + C to shutdown");
+console.log("Static file server running at\n  => http://192.168.43.236:" + port + "/\nCTRL + C to shutdown");
