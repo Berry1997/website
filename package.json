@@ -1,0 +1,23 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "web_MVP_prop.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Berry1997/website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Berry1997/website/issues"
+  },
+  "homepage": "https://github.com/Berry1997/website#readme",
+  "dependences": {
+    "jquery-lazyload": "1.9.7"
+  }
+}

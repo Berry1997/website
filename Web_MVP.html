@@ -50,7 +50,8 @@
     <span>
       MAP
     </span>
-    <canvas class="drawing-panel"></canvas>
+    <!--<canvas class="drawing-panel"></canvas>-->
+    <img class="drawing-panel lazy"  src="526622.jpg" id="4k_Pic">
   </div>
 
   <!-- Controller section -->
@@ -58,8 +59,8 @@
     <div class="row justify-content-around ml-2 mr-2 mt-2 mb-2 ">
       <div class="dropdown">
         <label for="starting" class="col-form-label">From: </label>
-        <button class="btn btn-primary dropdown-toggle " id="starting" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-          Start Point
+        <button class="btn btn-sm btn-primary dropdown-toggle " id="starting" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Start
           <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" id="menu" aria-labelledby="dropdownMenu1">
@@ -71,8 +72,8 @@
       </div>
       <div class="dropdown">
         <label for="stopping" class="col-form-label">To: </label>
-        <button id="stopping" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-          End Point
+        <button id="stopping" class="btn btn-sm btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          End
           <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" id="menu2" aria-labelledby="dropdownMenu1">
@@ -82,16 +83,16 @@
           <li><a href="#" class="dropdown-item">4</a></li>
         </ul>
       </div>
-      <button class="btn btn-secondary " id="OK">
+      <button class="btn btn-sm btn-secondary " id="OK">
         OK
       </button>
     </div>
 
-    <div class="col-12  d-xl-block border border-danger pt-3 AGV_Section">
+    <div class="col-12  d-xl-block border border-danger pt-3 pb-3 AGV_Section">
       <div class="control_panel">
         <div class="row ">
           <span class="col-4"> AGV #1 </span>
-          <div class="w-100 d-none d-md-block"></div>
+          <div class="d-none d-md-block"></div>
           <div class="position col-4" id="car_1_x">
             X:
           </div>
@@ -103,10 +104,10 @@
       </div>
     </div>
     <div class="row justify-content-end ml-3 mr-3 mt-2 mb-2">
-      <button class="btn btn-secondary mr-1" id="Clear">
+      <button class="btn btn-sm btn-secondary mr-1" id="Clear">
         Clear
       </button>
-      <button class="btn btn-secondary" id="car_generate">
+      <button class="btn btn-sm btn-secondary" id="car_generate">
         AGV
       </button>
     </div>
@@ -115,7 +116,9 @@
 </body>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
 <!--<script type="text/javascript" src="web_MVP_prop.js"></script>-->
+<script type="text/javascript" src="web_image.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
