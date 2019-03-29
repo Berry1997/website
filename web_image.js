@@ -14,7 +14,7 @@ $('#4k_Pic').on('wheel', function(e) {
     $(this).css("height", height * 1.1); // Scale height based on ratio
     $(this).css("width", width * 1.1);
   } else {
-    $(this).css("height", height * 0.9); // Scale height based on ratio
+    $(this).css("height", height * 0.9); // Scale width based on ratio
     $(this).css("width", width * 0.9);
   }
 })

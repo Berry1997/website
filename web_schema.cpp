@@ -1,34 +1,34 @@
-#line 1 "skin.tmpl"
+#line 1 "web_schema.tmpl"
 #include "content.h" 
-#line 2 "skin.tmpl"
+#line 2 "web_schema.tmpl"
 namespace my_skin {
-	#line 3 "skin.tmpl"
+	#line 3 "web_schema.tmpl"
 	struct  message :public cppcms::base_view
-	#line 3 "skin.tmpl"
+	#line 3 "web_schema.tmpl"
 	{
-	#line 3 "skin.tmpl"
+	#line 3 "web_schema.tmpl"
 		content::message &content;
-	#line 3 "skin.tmpl"
+	#line 3 "web_schema.tmpl"
 		message(std::ostream &_s,content::message &_content): cppcms::base_view(_s),content(_content),_domain_id(0)
-	#line 3 "skin.tmpl"
+	#line 3 "web_schema.tmpl"
 		{
-	#line 3 "skin.tmpl"
+	#line 3 "web_schema.tmpl"
 			_domain_id=booster::locale::ios_info::get(_s).domain_id();
-	#line 3 "skin.tmpl"
+	#line 3 "web_schema.tmpl"
 		}
-		#line 4 "skin.tmpl"
+		#line 4 "web_schema.tmpl"
 		virtual void render() {
-		#line 4 "skin.tmpl"
+		#line 4 "web_schema.tmpl"
 			cppcms::translation_domain_scope _trs(out(),_domain_id);
 
-			#line 134 "skin.tmpl"
+			#line 134 "web_schema.tmpl"
 			out()<<"\n"
 				"<html>\n"
 				"\n"
 				"<head>\n"
 				"\n"
 				"  <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css\" integrity=\"sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS\" crossorigin=\"anonymous\" />\n"
-				"  <link rel=\"stylesheet\" type=\"text/css\" href=\"web_MVP.css\" />\n"
+				"  <link rel=\"stylesheet\" type=\"text/css\" href=\"/content/style/web_MVP.css\" />\n"
 				"  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\" />\n"
 				"  <script src=\"https://www.gstatic.com/jsaction/contract.js\"></script>\n"
 				"  <script src=\"https://www.gstatic.com/jsaction/dispatcher.js\"></script>\n"
@@ -77,7 +77,7 @@ namespace my_skin {
 				"    </span>\n"
 				"    <!--<canvas class=\"drawing-panel\"></canvas>-->\n"
 				"    <div class=\"drawing-panel\">\n"
-				"    <img src=\"/content/526622.jpg\" id=\"4k_Pic\">\n"
+				"      <img src=\"/content/526622.jpg\" id=\"4k_Pic\">\n"
 				"    </div>\n"
 				"\n"
 				"  </div>\n"
@@ -146,46 +146,46 @@ namespace my_skin {
 				"<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>\n"
 				"<script src=\"https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js\" type=\"text/javascript\"></script>\n"
 				"<!--<script type=\"text/javascript\" src=\"web_MVP_prop.js\"></script>-->\n"
-				"<script type=\"text/javascript\" src=\"web_image.js\"></script>\n"
+				"<script type=\"text/javascript\" src=\"/content/style/web_image.js\"></script>\n"
 				"<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js\" integrity=\"sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut\" crossorigin=\"anonymous\"></script>\n"
 				"<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>\n"
 				"\n"
 				"</html>\n"
 				"\n"
 				"";
-		#line 134 "skin.tmpl"
+		#line 134 "web_schema.tmpl"
 		} // end of template render
-	#line 135 "skin.tmpl"
+	#line 135 "web_schema.tmpl"
 	private:
-	#line 135 "skin.tmpl"
+	#line 135 "web_schema.tmpl"
 		int _domain_id;
-	#line 135 "skin.tmpl"
+	#line 135 "web_schema.tmpl"
 	}; // end of class message
-#line 136 "skin.tmpl"
+#line 136 "web_schema.tmpl"
 } // end of namespace my_skin
-#line 2 "skin.tmpl"
+#line 2 "web_schema.tmpl"
 namespace my_skin {
-#line 136 "skin.tmpl"
+#line 136 "web_schema.tmpl"
 } // end of namespace my_skin
-#line 137 "skin.tmpl"
+#line 137 "web_schema.tmpl"
 namespace {
-#line 137 "skin.tmpl"
+#line 137 "web_schema.tmpl"
  cppcms::views::generator my_generator; 
-#line 137 "skin.tmpl"
+#line 137 "web_schema.tmpl"
  struct loader { 
-#line 137 "skin.tmpl"
+#line 137 "web_schema.tmpl"
   loader() { 
-#line 137 "skin.tmpl"
+#line 137 "web_schema.tmpl"
    my_generator.name("my_skin");
-#line 137 "skin.tmpl"
+#line 137 "web_schema.tmpl"
    my_generator.add_view<my_skin::message,content::message>("message",true);
-#line 137 "skin.tmpl"
+#line 137 "web_schema.tmpl"
     cppcms::views::pool::instance().add(my_generator);
-#line 137 "skin.tmpl"
+#line 137 "web_schema.tmpl"
  }
-#line 137 "skin.tmpl"
+#line 137 "web_schema.tmpl"
  ~loader() {  cppcms::views::pool::instance().remove(my_generator); }
-#line 137 "skin.tmpl"
+#line 137 "web_schema.tmpl"
 } a_loader;
-#line 137 "skin.tmpl"
+#line 137 "web_schema.tmpl"
 } // anon 
