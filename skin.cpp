@@ -21,7 +21,7 @@ namespace my_skin {
 		#line 4 "skin.tmpl"
 			cppcms::translation_domain_scope _trs(out(),_domain_id);
 
-			#line 133 "skin.tmpl"
+			#line 134 "skin.tmpl"
 			out()<<"\n"
 				"<html>\n"
 				"\n"
@@ -77,7 +77,7 @@ namespace my_skin {
 				"    </span>\n"
 				"    <!--<canvas class=\"drawing-panel\"></canvas>-->\n"
 				"    <div class=\"drawing-panel\">\n"
-				"      <img src=\"file://home/q600/Desktop/website/526622.jpg\" id=\"4k_Pic\">\n"
+				"    <img src=\"/content/526622.jpg\" id=\"4k_Pic\">\n"
 				"    </div>\n"
 				"\n"
 				"  </div>\n"
@@ -146,45 +146,46 @@ namespace my_skin {
 				"<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>\n"
 				"<script src=\"https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js\" type=\"text/javascript\"></script>\n"
 				"<!--<script type=\"text/javascript\" src=\"web_MVP_prop.js\"></script>-->\n"
+				"<script type=\"text/javascript\" src=\"web_image.js\"></script>\n"
 				"<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js\" integrity=\"sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut\" crossorigin=\"anonymous\"></script>\n"
 				"<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js\" integrity=\"sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl\" crossorigin=\"anonymous\"></script>\n"
 				"\n"
 				"</html>\n"
 				"\n"
 				"";
-		#line 133 "skin.tmpl"
+		#line 134 "skin.tmpl"
 		} // end of template render
-	#line 134 "skin.tmpl"
+	#line 135 "skin.tmpl"
 	private:
-	#line 134 "skin.tmpl"
+	#line 135 "skin.tmpl"
 		int _domain_id;
-	#line 134 "skin.tmpl"
+	#line 135 "skin.tmpl"
 	}; // end of class message
-#line 135 "skin.tmpl"
+#line 136 "skin.tmpl"
 } // end of namespace my_skin
 #line 2 "skin.tmpl"
 namespace my_skin {
-#line 135 "skin.tmpl"
+#line 136 "skin.tmpl"
 } // end of namespace my_skin
-#line 136 "skin.tmpl"
+#line 137 "skin.tmpl"
 namespace {
-#line 136 "skin.tmpl"
+#line 137 "skin.tmpl"
  cppcms::views::generator my_generator; 
-#line 136 "skin.tmpl"
+#line 137 "skin.tmpl"
  struct loader { 
-#line 136 "skin.tmpl"
+#line 137 "skin.tmpl"
   loader() { 
-#line 136 "skin.tmpl"
+#line 137 "skin.tmpl"
    my_generator.name("my_skin");
-#line 136 "skin.tmpl"
+#line 137 "skin.tmpl"
    my_generator.add_view<my_skin::message,content::message>("message",true);
-#line 136 "skin.tmpl"
+#line 137 "skin.tmpl"
     cppcms::views::pool::instance().add(my_generator);
-#line 136 "skin.tmpl"
+#line 137 "skin.tmpl"
  }
-#line 136 "skin.tmpl"
+#line 137 "skin.tmpl"
  ~loader() {  cppcms::views::pool::instance().remove(my_generator); }
-#line 136 "skin.tmpl"
+#line 137 "skin.tmpl"
 } a_loader;
-#line 136 "skin.tmpl"
+#line 137 "skin.tmpl"
 } // anon 
